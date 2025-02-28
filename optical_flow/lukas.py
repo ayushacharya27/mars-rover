@@ -4,7 +4,7 @@ import numpy as np
 # For Sharpening of Images
 kernel = np.array([[-1,-1,-1],[-1,9,-1],[-1,-1,-1]])
 
-video = cv2.VideoCapture(0)
+video = cv2.VideoCapture(2)
 
 ret , cap1 = video.read()
 frame = cv2.cvtColor(cap1,cv2.COLOR_BGR2GRAY)

@@ -1,0 +1,2 @@
+
+-DCATKIN_DEVEL_PREFIX=/home/ayush3112/Desktop/mars-rover/ros_pkg/devel -DCMAKE_INSTALL_PREFIX=/home/ayush3112/Desktop/mars-rover/ros_pkg/install -G Unix Makefiles
