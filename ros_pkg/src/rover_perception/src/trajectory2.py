@@ -24,13 +24,13 @@ def flow_points_callback(msg):
     global x, y, tx1, ty1
     data = np.array(msg.data, dtype=np.float32)
 
-    if len(data) != 24 or len(data) == 0:
-        rospy.logerr("Must be 24 Points")
+    if len(data) != 40 or len(data) == 0:
+        rospy.logerr("Must be 40 Points")
         return
 
     half = int(len(data) / 2)
-    pts0 = data[:half].reshape(6, 2)
-    pts1 = data[half:].reshape(6, 2)
+    pts0 = data[:half].reshape(10, 2)
+    pts1 = data[half:].reshape(10, 2)
 
     transformation_matrix, _ = cv2.estimateAffinePartial2D(pts0, pts1, method=cv2.RANSAC)
 
@@ -38,7 +38,7 @@ def flow_points_callback(msg):
         return
 
     tx, ty = transformation_matrix[:, 2]
-    tx1 += tx
+    '''tx1 += tx
     ty1 += ty
 
     if tx1 <= -8 and ty1 <= -8:
@@ -51,7 +51,9 @@ def flow_points_callback(msg):
         y -= 1
 
     # Add new position to queue
-    data_queue.put((x, y))
+    data_queue.put((x, y))'''
+
+    print(tx , ty)
 
 def ros_thread():
     """Run ROS in a separate thread."""

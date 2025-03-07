@@ -65,8 +65,8 @@ def image_callback(ros_image):
             cv2.line(mask, (a, b), (c, d), (255, 0, 0), 1)
 
         output = cv2.add(frame , mask)
-        pts0 = np.float32(good_old[:6]).flatten() # selecting any 3 points and will calc the tx , ty ... from Transformation_Matrix
-        pts1 = np.float32(good_new[:6]).flatten()
+        pts0 = np.float32(good_old[:12]).flatten() # selecting any 3 points and will calc the tx , ty ... from Transformation_Matrix
+        pts1 = np.float32(good_new[:12]).flatten()
 
         '''if len(good_new) >= 3:
             # Sort points based on stability (smallest movement between frames)
