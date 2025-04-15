@@ -4,7 +4,7 @@
 
     <!-- Start the mode subscriber node (handles serial communication) -->
     <node name="mode_serial_subscriber" pkg="rov_mode" type="controller_sub.py" output="screen">
-        <param name="serial_port" value="/dev/ttyUSB0"/>
+        <param name="serial_port" value="/dev/ttyACM0   "/>
         <param name="baud_rate" value="9600"/>
     </node>
 </launch>

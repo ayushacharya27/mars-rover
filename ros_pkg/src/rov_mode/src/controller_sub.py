@@ -5,7 +5,7 @@ import serial
 from std_msgs.msg import Int32MultiArray
 
 # Initialize serial port
-SERIAL_PORT = "/dev/ttyUSB0"  # Change this as per your setup
+SERIAL_PORT = "/dev/ttyACM0"  # Change this as per your setup
 BAUD_RATE = 9600   
 
 try:

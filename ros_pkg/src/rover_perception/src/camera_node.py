@@ -13,7 +13,7 @@ def main():
     rate = rospy.Rate(10)
 
     # Open the camera (usually /dev/video0 for USB cameras)
-    cap = cv2.VideoCapture(2)
+    cap = cv2.VideoCapture(0)
 
     if not cap.isOpened():
         rospy.loginfo("Camera not found.")

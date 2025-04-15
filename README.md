@@ -10,3 +10,13 @@ This project aims to develop an autonomous Mars rover capable of navigating roug
 ![Alt Text](photos/planning/2.jpeg)
 
 ![Alt Text](photos/planning/3.jpeg)
+
+##  New Update !!
+### Electircal Part of the Rover is now figured out
+![Alt Text](photos/electicaldone/1.jpg)
+
+![Alt Text](photos/electicaldone/2.jpg)
+
+![Alt Text](photos/electicaldone/3.jpg)
+
+
